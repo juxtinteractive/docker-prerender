@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Dockerfile to build the prerender container image",
   "main": "server.js",
+  "private": true,
   "dependencies": {
     "prerender": "^3.14.1"
   },

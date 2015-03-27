@@ -1,6 +1,7 @@
 var prerender = require('prerender');
 
 var server = prerender({
+	port: 8080,
 	workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS,
 	iterations: process.env.PHANTOM_WORKER_ITERATIONS || 10,
 	phantomBasePort: process.env.PHANTOM_CLUSTER_BASE_PORT || 12300,

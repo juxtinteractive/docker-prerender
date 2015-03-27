@@ -2,11 +2,11 @@ FROM node:latest
 
 MAINTAINER Corentin Kerisit "c@42.am"
 
-RUN echo deb http://ftp.debian.org/debian/ jessie main contrib non-free > /etc/apt/source.list
+# RUN echo deb http://ftp.debian.org/debian/ jessie main contrib non-free > /etc/apt/source.list
 
-RUN apt-get update -y && apt-get install -y \
-    python2.7 python-pip \
-    libfreetype6 libfontconfig
+# RUN apt-get update -y && apt-get install -y \
+#     python2.7 python-pip \
+#     libfreetype6 libfontconfig
 
 RUN mkdir /data
 
@@ -16,3 +16,5 @@ RUN cd /data && npm install
 ADD . /data/
 
 CMD node /data/server.js
+
+EXPOSE 8080
