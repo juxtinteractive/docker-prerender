@@ -8,12 +8,18 @@ Forked from [cerisier/docker-prerender](https://github.com/cerisier/docker-prere
 Deploying to [dokku(-alt)](https://github.com/dokku-alt/dokku-alt)
 ==================
 
-Check out this project and add an origin
+Check out this project, add an origin, and push!
 
-`git remote add dokku dokku@dokku:project-name`
+```
+git remote add dokku dokku@dokku:project-name
+git push dokku master
+```
 
-Create a redis database
+### Adding a cache
+
+To add a cache, using redis, connect a redis database to the project.
 
 `dokku redis:create project-name`
 
-This should set `REDIS_URL` environment variable on the project.
+This should set `REDIS_URL` environment variable on the project which will
+be used automatically.

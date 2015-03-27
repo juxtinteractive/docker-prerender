@@ -5,7 +5,8 @@
   "main": "server.js",
   "private": true,
   "dependencies": {
-    "prerender": "^3.14.1"
+    "prerender": "^3.14.1",
+    "prerender-redis-cache": "^0.1.3"
   },
   "devDependencies": {},
   "scripts": {
