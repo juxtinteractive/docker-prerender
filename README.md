@@ -23,3 +23,6 @@ To add a cache, using redis, connect a redis database to the project.
 
 This should set `REDIS_URL` environment variable on the project which will
 be used automatically.
+
+To change the page cache time, set the `PAGE_TTL` variable to the number
+of seconds you'd like the page to live in cache.
