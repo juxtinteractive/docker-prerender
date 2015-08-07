@@ -4,9 +4,11 @@
   "description": "Dockerfile to build the prerender container image",
   "main": "server.js",
   "private": true,
+  "keywords": [],
+  "engines" : { "node" : "0.10.36" },
   "dependencies": {
-    "prerender": "^3.14.1",
-    "prerender-redis-cache": "^0.1.3"
+    "prerender": "3.14.1",
+    "prerender-redis-cache": "0.1.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,8 +19,11 @@
     "type": "git",
     "url": "https://github.com/cerisier/docker-prerender.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "JUXT <engineering@juxt.com>",
+  "contributors": [
+    "jessefulton"
+  ],
+  "license": "",
   "bugs": {
     "url": "https://github.com/cerisier/docker-prerender/issues"
   },
