@@ -18,9 +18,9 @@ if (process.env.BASIC_AUTH_USERNAME) {
 if (process.env.REDIS_URL) {
 	server.use(require('prerender-redis-cache'));
 }
-
-
-server.use(prerender.inMemoryHtmlCache());
+else {
+	server.use(prerender.inMemoryHtmlCache());
+}
 
 //server.use(prerender.blacklist());
 //server.use(prerender.httpHeaders());

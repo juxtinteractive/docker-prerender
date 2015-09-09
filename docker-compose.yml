@@ -1,0 +1,12 @@
+redis:
+  image: 'redis:latest'
+prerender:
+  build: .
+  links:
+    - redis
+  environment:
+    - 'REDIS_URL=redis://redis:6379'
+  ports:
+    - '8080:8080'
+  volumes:
+    - ./src:/data/src

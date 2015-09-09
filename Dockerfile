@@ -7,8 +7,8 @@ RUN mkdir /data
 ADD ./package.json /data/package.json
 RUN cd /data && npm install
 
-ADD . /data/
+ADD ./src/server.js /data/src/server.js
 
-CMD node /data/server.js
-
+CMD node /data/src/server.js
+VOLUME /data/src/
 EXPOSE 8080
